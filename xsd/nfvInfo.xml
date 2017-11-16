@@ -1,21 +1,299 @@
-<nfv:networkProvider xmlns:nfv="http://www.example.org/nfvInfo">
-  <!--Zero or more repetitions:-->
-  <nfv:nffg name_nffg="nodoprova" deploy_time="2008-09-29T03:49:45">
-    <!--Zero or more repetitions:-->
-    <nfv:node node_name="n1" host_name="h1" functionaltypeId="f2">
-      <!--Zero or more repetitions:-->
-      <nfv:link link_name="link" sourceNode="n1" destinationNode="n1" min_throughput="1.5E2" max_latency="1.5E2"/>
-    </nfv:node>
-  </nfv:nffg>
-  <!--1 or more repetitions:-->
-  <nfv:in>
-    <!--Zero or more repetitions:-->
-    <nfv:host hostName="string" number_VNFs="3" memory="1.5E2" disk_storage="1.5E2"/>
-    <!--Optional:-->
-    <nfv:performance avg_throughput="1.5E2" latency="1.5E2" sourceHost="string" destinationHost="string"/>
-  </nfv:in>
-  <nfv:catalog>
-    <!--1 or more repetitions:-->
-    <nfv:functionaltype functionaltypeId="f2" functionalTypeName="MAIL_CLIENT" required_memory="1.5E2" required_storage="1.5E2"/>
-  </nfv:catalog>
-</nfv:networkProvider>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<networkProvider xmlns="http://www.example.org/nfvInfo">
+  <nffg name_nffg="Nffg4" deploy_time="2016-09-27T22:53:20.000+02:00">
+    <node node_name="WEBCLIENTt0Nffg4" host_name="H2" functionaltypeId="WEBCLIENTt">
+      <link link_name="Link21" sourceNode="WEBCLIENTt0Nffg4" destinationNode="DPIc7Nffg4"/>
+      <link link_name="Link20" sourceNode="WEBCLIENTt0Nffg4" destinationNode="DPIc5Nffg4"/>
+      <link link_name="Link0" sourceNode="WEBCLIENTt0Nffg4" destinationNode="DPIc0Nffg4"/>
+      <link link_name="Link18" sourceNode="WEBCLIENTt0Nffg4" destinationNode="FWb3Nffg4"/>
+    </node>
+    <node node_name="DPIc5Nffg4" host_name="H4" functionaltypeId="DPIc">
+      <link link_name="Link15" sourceNode="DPIc5Nffg4" destinationNode="DPIc2Nffg4"/>
+      <link link_name="Link8" sourceNode="DPIc5Nffg4" destinationNode="DPIc7Nffg4"/>
+    </node>
+    <node node_name="DPIc7Nffg4" host_name="H0" functionaltypeId="DPIc">
+      <link link_name="Link22" sourceNode="DPIc7Nffg4" destinationNode="DPIc1Nffg4"/>
+      <link link_name="Link10" sourceNode="DPIc7Nffg4" destinationNode="DPIc0Nffg4"/>
+    </node>
+    <node node_name="DPIc8Nffg4" host_name="H0" functionaltypeId="DPIc">
+      <link link_name="Link16" sourceNode="DPIc8Nffg4" destinationNode="FWb6Nffg4"/>
+      <link link_name="Link7" sourceNode="DPIc8Nffg4" destinationNode="DPIc2Nffg4"/>
+    </node>
+    <node node_name="DPIc0Nffg4" host_name="H4" functionaltypeId="DPIc">
+      <link link_name="Link14" sourceNode="DPIc0Nffg4" destinationNode="DPIc2Nffg4"/>
+      <link link_name="Link25" sourceNode="DPIc0Nffg4" destinationNode="FWb6Nffg4"/>
+      <link link_name="Link1" sourceNode="DPIc0Nffg4" destinationNode="WEBCLIENTt0Nffg4"/>
+      <link link_name="Link24" sourceNode="DPIc0Nffg4" destinationNode="DPIc7Nffg4"/>
+      <link link_name="Link3" sourceNode="DPIc0Nffg4" destinationNode="MAILSERVERt0Nffg4"/>
+    </node>
+    <node node_name="FWb6Nffg4" host_name="H4" functionaltypeId="FWb">
+      <link link_name="Link13" sourceNode="FWb6Nffg4" destinationNode="DPIc1Nffg4"/>
+      <link link_name="Link5" sourceNode="FWb6Nffg4" destinationNode="DPIc7Nffg4"/>
+    </node>
+    <node node_name="MAILSERVERt0Nffg4" host_name="H4" functionaltypeId="MAILSERVERt">
+      <link link_name="Link2" sourceNode="MAILSERVERt0Nffg4" destinationNode="DPIc0Nffg4"/>
+      <link link_name="Link19" sourceNode="MAILSERVERt0Nffg4" destinationNode="DPIc1Nffg4"/>
+    </node>
+    <node node_name="FWb3Nffg4" host_name="H1" functionaltypeId="FWb"/>
+    <node node_name="VPNa4Nffg4" host_name="H2" functionaltypeId="VPNa">
+      <link link_name="Link11" sourceNode="VPNa4Nffg4" destinationNode="MAILSERVERt0Nffg4"/>
+    </node>
+    <node node_name="DPIc1Nffg4" host_name="H0" functionaltypeId="DPIc">
+      <link link_name="Link23" sourceNode="DPIc1Nffg4" destinationNode="FWb6Nffg4"/>
+      <link link_name="Link4" sourceNode="DPIc1Nffg4" destinationNode="VPNa4Nffg4"/>
+      <link link_name="Link17" sourceNode="DPIc1Nffg4" destinationNode="DPIc2Nffg4"/>
+      <link link_name="Link9" sourceNode="DPIc1Nffg4" destinationNode="DPIc0Nffg4"/>
+    </node>
+    <node node_name="DPIc2Nffg4" host_name="H0" functionaltypeId="DPIc">
+      <link link_name="Link12" sourceNode="DPIc2Nffg4" destinationNode="MAILSERVERt0Nffg4"/>
+      <link link_name="Link6" sourceNode="DPIc2Nffg4" destinationNode="DPIc0Nffg4"/>
+    </node>
+  </nffg>
+  <nffg name_nffg="Nffg3" deploy_time="2016-09-28T11:35:20.000+02:00">
+    <node node_name="FWb7Nffg3" host_name="H0" functionaltypeId="FWb">
+      <link link_name="Link12" sourceNode="FWb7Nffg3" destinationNode="MAILCLIENTt2Nffg3"/>
+      <link link_name="Link31" sourceNode="FWb7Nffg3" destinationNode="VPNa2Nffg3"/>
+      <link link_name="Link16" sourceNode="FWb7Nffg3" destinationNode="VPNa6Nffg3"/>
+    </node>
+    <node node_name="VPNa2Nffg3" host_name="H0" functionaltypeId="VPNa">
+      <link link_name="Link20" sourceNode="VPNa2Nffg3" destinationNode="MAILCLIENTt2Nffg3"/>
+      <link link_name="Link15" sourceNode="VPNa2Nffg3" destinationNode="WEBCLIENTt0Nffg3"/>
+      <link link_name="Link40" sourceNode="VPNa2Nffg3" destinationNode="DPId8Nffg3"/>
+    </node>
+    <node node_name="MAILCLIENTt4Nffg3" host_name="H2" functionaltypeId="MAILCLIENTt">
+      <link link_name="Link37" sourceNode="MAILCLIENTt4Nffg3" destinationNode="VPNa0Nffg3"/>
+      <link link_name="Link18" sourceNode="MAILCLIENTt4Nffg3" destinationNode="DPId8Nffg3"/>
+      <link link_name="Link8" sourceNode="MAILCLIENTt4Nffg3" destinationNode="FWb1Nffg3"/>
+    </node>
+    <node node_name="DPId3Nffg3" host_name="H1" functionaltypeId="DPId">
+      <link link_name="Link33" sourceNode="DPId3Nffg3" destinationNode="FWb7Nffg3"/>
+      <link link_name="Link14" sourceNode="DPId3Nffg3" destinationNode="DPId8Nffg3"/>
+    </node>
+    <node node_name="DPIc9Nffg3" host_name="H1" functionaltypeId="DPIc">
+      <link link_name="Link34" sourceNode="DPIc9Nffg3" destinationNode="DPId5Nffg3"/>
+      <link link_name="Link5" sourceNode="DPIc9Nffg3" destinationNode="MAILCLIENTt2Nffg3"/>
+      <link link_name="Link39" sourceNode="DPIc9Nffg3" destinationNode="VPNa2Nffg3"/>
+    </node>
+    <node node_name="MAILCLIENTt1Nffg3" host_name="H5" functionaltypeId="MAILCLIENTt">
+      <link link_name="Link43" sourceNode="MAILCLIENTt1Nffg3" destinationNode="DPId8Nffg3"/>
+      <link link_name="Link2" sourceNode="MAILCLIENTt1Nffg3" destinationNode="VPNa0Nffg3"/>
+    </node>
+    <node node_name="MAILCLIENTt2Nffg3" host_name="H0" functionaltypeId="MAILCLIENTt">
+      <link link_name="Link22" sourceNode="MAILCLIENTt2Nffg3" destinationNode="VPNa4Nffg3"/>
+      <link link_name="Link4" sourceNode="MAILCLIENTt2Nffg3" destinationNode="DPIc9Nffg3"/>
+      <link link_name="Link17" sourceNode="MAILCLIENTt2Nffg3" destinationNode="DPId5Nffg3"/>
+      <link link_name="Link30" sourceNode="MAILCLIENTt2Nffg3" destinationNode="VPNa6Nffg3"/>
+    </node>
+    <node node_name="FWb1Nffg3" host_name="H5" functionaltypeId="FWb">
+      <link link_name="Link23" sourceNode="FWb1Nffg3" destinationNode="MAILSERVERt0Nffg3"/>
+      <link link_name="Link25" sourceNode="FWb1Nffg3" destinationNode="DPIc9Nffg3"/>
+      <link link_name="Link9" sourceNode="FWb1Nffg3" destinationNode="MAILCLIENTt4Nffg3"/>
+    </node>
+    <node node_name="VPNa4Nffg3" host_name="H2" functionaltypeId="VPNa">
+      <link link_name="Link27" sourceNode="VPNa4Nffg3" destinationNode="MAILCLIENTt3Nffg3"/>
+      <link link_name="Link26" sourceNode="VPNa4Nffg3" destinationNode="MAILCLIENTt2Nffg3"/>
+      <link link_name="Link35" sourceNode="VPNa4Nffg3" destinationNode="FWb7Nffg3"/>
+    </node>
+    <node node_name="VPNa6Nffg3" host_name="H4" functionaltypeId="VPNa">
+      <link link_name="Link21" sourceNode="VPNa6Nffg3" destinationNode="DPId3Nffg3"/>
+      <link link_name="Link41" sourceNode="VPNa6Nffg3" destinationNode="MAILSERVERt0Nffg3"/>
+    </node>
+    <node node_name="MAILSERVERt0Nffg3" host_name="H3" functionaltypeId="MAILSERVERt">
+      <link link_name="Link44" sourceNode="MAILSERVERt0Nffg3" destinationNode="DPId8Nffg3"/>
+      <link link_name="Link10" sourceNode="MAILSERVERt0Nffg3" destinationNode="VPNa0Nffg3"/>
+      <link link_name="Link38" sourceNode="MAILSERVERt0Nffg3" destinationNode="DPId5Nffg3"/>
+      <link link_name="Link29" sourceNode="MAILSERVERt0Nffg3" destinationNode="FWb7Nffg3"/>
+    </node>
+    <node node_name="DPId5Nffg3" host_name="H3" functionaltypeId="DPId">
+      <link link_name="Link32" sourceNode="DPId5Nffg3" destinationNode="DPIc9Nffg3"/>
+      <link link_name="Link24" sourceNode="DPId5Nffg3" destinationNode="MAILCLIENTt4Nffg3"/>
+      <link link_name="Link28" sourceNode="DPId5Nffg3" destinationNode="MAILCLIENTt1Nffg3"/>
+    </node>
+    <node node_name="VPNa0Nffg3" host_name="H4" functionaltypeId="VPNa">
+      <link link_name="Link11" sourceNode="VPNa0Nffg3" destinationNode="MAILSERVERt0Nffg3"/>
+      <link link_name="Link3" sourceNode="VPNa0Nffg3" destinationNode="MAILCLIENTt1Nffg3"/>
+      <link link_name="Link19" sourceNode="VPNa0Nffg3" destinationNode="FWb7Nffg3"/>
+      <link link_name="Link7" sourceNode="VPNa0Nffg3" destinationNode="MAILCLIENTt3Nffg3"/>
+    </node>
+    <node node_name="DPId8Nffg3" host_name="H0" functionaltypeId="DPId">
+      <link link_name="Link42" sourceNode="DPId8Nffg3" destinationNode="VPNa0Nffg3"/>
+      <link link_name="Link1" sourceNode="DPId8Nffg3" destinationNode="WEBCLIENTt0Nffg3"/>
+    </node>
+    <node node_name="WEBCLIENTt0Nffg3" host_name="H4" functionaltypeId="WEBCLIENTt">
+      <link link_name="Link0" sourceNode="WEBCLIENTt0Nffg3" destinationNode="DPId8Nffg3"/>
+      <link link_name="Link13" sourceNode="WEBCLIENTt0Nffg3" destinationNode="DPIc9Nffg3"/>
+    </node>
+    <node node_name="MAILCLIENTt3Nffg3" host_name="H1" functionaltypeId="MAILCLIENTt">
+      <link link_name="Link36" sourceNode="MAILCLIENTt3Nffg3" destinationNode="DPIc9Nffg3"/>
+      <link link_name="Link6" sourceNode="MAILCLIENTt3Nffg3" destinationNode="VPNa0Nffg3"/>
+    </node>
+  </nffg>
+  <nffg name_nffg="Nffg2" deploy_time="2016-09-29T02:11:20.000+02:00">
+    <node node_name="DPIc5Nffg2" host_name="H2" functionaltypeId="DPIc">
+      <link link_name="Link54" sourceNode="DPIc5Nffg2" destinationNode="FWb0Nffg2"/>
+      <link link_name="Link49" sourceNode="DPIc5Nffg2" destinationNode="MAILSERVERt2Nffg2"/>
+      <link link_name="Link1" sourceNode="DPIc5Nffg2" destinationNode="MAILCLIENTt0Nffg2"/>
+      <link link_name="Link35" sourceNode="DPIc5Nffg2" destinationNode="VPNa4Nffg2"/>
+      <link link_name="Link41" sourceNode="DPIc5Nffg2" destinationNode="MAILSERVERt1Nffg2"/>
+      <link link_name="Link40" sourceNode="DPIc5Nffg2" destinationNode="DPId2Nffg2"/>
+    </node>
+    <node node_name="MAILSERVERt2Nffg2" host_name="H0" functionaltypeId="MAILSERVERt">
+      <link link_name="Link34" sourceNode="MAILSERVERt2Nffg2" destinationNode="FWb1Nffg2"/>
+      <link link_name="Link43" sourceNode="MAILSERVERt2Nffg2" destinationNode="DPId2Nffg2"/>
+      <link link_name="Link6" sourceNode="MAILSERVERt2Nffg2" destinationNode="FWb0Nffg2"/>
+    </node>
+    <node node_name="FWb1Nffg2" host_name="H4" functionaltypeId="FWb">
+      <link link_name="Link32" sourceNode="FWb1Nffg2" destinationNode="MAILCLIENTt0Nffg2"/>
+      <link link_name="Link20" sourceNode="FWb1Nffg2" destinationNode="MAILSERVERt2Nffg2"/>
+      <link link_name="Link25" sourceNode="FWb1Nffg2" destinationNode="VPNa4Nffg2"/>
+      <link link_name="Link36" sourceNode="FWb1Nffg2" destinationNode="DPId2Nffg2"/>
+      <link link_name="Link13" sourceNode="FWb1Nffg2" destinationNode="VPNa3Nffg2"/>
+    </node>
+    <node node_name="MAILSERVERt4Nffg2" host_name="H2" functionaltypeId="MAILSERVERt">
+      <link link_name="Link22" sourceNode="MAILSERVERt4Nffg2" destinationNode="VPNa6Nffg2"/>
+      <link link_name="Link10" sourceNode="MAILSERVERt4Nffg2" destinationNode="FWb0Nffg2"/>
+      <link link_name="Link30" sourceNode="MAILSERVERt4Nffg2" destinationNode="DPId2Nffg2"/>
+    </node>
+    <node node_name="VPNa4Nffg2" host_name="H1" functionaltypeId="VPNa">
+      <link link_name="Link44" sourceNode="VPNa4Nffg2" destinationNode="MAILSERVERt4Nffg2"/>
+      <link link_name="Link37" sourceNode="VPNa4Nffg2" destinationNode="FWb0Nffg2"/>
+      <link link_name="Link57" sourceNode="VPNa4Nffg2" destinationNode="VPNa3Nffg2"/>
+      <link link_name="Link3" sourceNode="VPNa4Nffg2" destinationNode="MAILSERVERt0Nffg2"/>
+      <link link_name="Link17" sourceNode="VPNa4Nffg2" destinationNode="VPNa6Nffg2"/>
+    </node>
+    <node node_name="MAILSERVERt1Nffg2" host_name="H5" functionaltypeId="MAILSERVERt">
+      <link link_name="Link12" sourceNode="MAILSERVERt1Nffg2" destinationNode="VPNa3Nffg2"/>
+      <link link_name="Link21" sourceNode="MAILSERVERt1Nffg2" destinationNode="DPIc5Nffg2"/>
+      <link link_name="Link19" sourceNode="MAILSERVERt1Nffg2" destinationNode="VPNa6Nffg2"/>
+      <link link_name="Link4" sourceNode="MAILSERVERt1Nffg2" destinationNode="FWb0Nffg2"/>
+    </node>
+    <node node_name="VPNa6Nffg2" host_name="H3" functionaltypeId="VPNa">
+      <link link_name="Link56" sourceNode="VPNa6Nffg2" destinationNode="VPNa3Nffg2"/>
+      <link link_name="Link42" sourceNode="VPNa6Nffg2" destinationNode="DPId2Nffg2"/>
+      <link link_name="Link18" sourceNode="VPNa6Nffg2" destinationNode="MAILCLIENTt0Nffg2"/>
+      <link link_name="Link50" sourceNode="VPNa6Nffg2" destinationNode="FWb1Nffg2"/>
+    </node>
+    <node node_name="FWb0Nffg2" host_name="H3" functionaltypeId="FWb">
+      <link link_name="Link11" sourceNode="FWb0Nffg2" destinationNode="MAILSERVERt4Nffg2"/>
+      <link link_name="Link55" sourceNode="FWb0Nffg2" destinationNode="MAILSERVERt0Nffg2"/>
+      <link link_name="Link27" sourceNode="FWb0Nffg2" destinationNode="MAILSERVERt3Nffg2"/>
+      <link link_name="Link15" sourceNode="FWb0Nffg2" destinationNode="DPIc5Nffg2"/>
+      <link link_name="Link46" sourceNode="FWb0Nffg2" destinationNode="MAILCLIENTt0Nffg2"/>
+      <link link_name="Link5" sourceNode="FWb0Nffg2" destinationNode="MAILSERVERt1Nffg2"/>
+      <link link_name="Link7" sourceNode="FWb0Nffg2" destinationNode="MAILSERVERt2Nffg2"/>
+    </node>
+    <node node_name="DPId2Nffg2" host_name="H5" functionaltypeId="DPId">
+      <link link_name="Link53" sourceNode="DPId2Nffg2" destinationNode="MAILSERVERt0Nffg2"/>
+      <link link_name="Link38" sourceNode="DPId2Nffg2" destinationNode="VPNa6Nffg2"/>
+      <link link_name="Link48" sourceNode="DPId2Nffg2" destinationNode="MAILSERVERt1Nffg2"/>
+      <link link_name="Link47" sourceNode="DPId2Nffg2" destinationNode="VPNa3Nffg2"/>
+      <link link_name="Link29" sourceNode="DPId2Nffg2" destinationNode="DPIc5Nffg2"/>
+      <link link_name="Link39" sourceNode="DPId2Nffg2" destinationNode="MAILSERVERt2Nffg2"/>
+      <link link_name="Link52" sourceNode="DPId2Nffg2" destinationNode="FWb1Nffg2"/>
+    </node>
+    <node node_name="VPNa3Nffg2" host_name="H0" functionaltypeId="VPNa">
+      <link link_name="Link45" sourceNode="VPNa3Nffg2" destinationNode="MAILSERVERt2Nffg2"/>
+      <link link_name="Link16" sourceNode="VPNa3Nffg2" destinationNode="DPId2Nffg2"/>
+      <link link_name="Link51" sourceNode="VPNa3Nffg2" destinationNode="MAILCLIENTt0Nffg2"/>
+      <link link_name="Link9" sourceNode="VPNa3Nffg2" destinationNode="MAILSERVERt3Nffg2"/>
+    </node>
+    <node node_name="MAILSERVERt3Nffg2" host_name="H1" functionaltypeId="MAILSERVERt">
+      <link link_name="Link31" sourceNode="MAILSERVERt3Nffg2" destinationNode="VPNa6Nffg2"/>
+      <link link_name="Link26" sourceNode="MAILSERVERt3Nffg2" destinationNode="DPIc5Nffg2"/>
+      <link link_name="Link14" sourceNode="MAILSERVERt3Nffg2" destinationNode="FWb1Nffg2"/>
+      <link link_name="Link8" sourceNode="MAILSERVERt3Nffg2" destinationNode="VPNa3Nffg2"/>
+    </node>
+    <node node_name="MAILCLIENTt0Nffg2" host_name="H3" functionaltypeId="MAILCLIENTt">
+      <link link_name="Link23" sourceNode="MAILCLIENTt0Nffg2" destinationNode="VPNa6Nffg2"/>
+      <link link_name="Link33" sourceNode="MAILCLIENTt0Nffg2" destinationNode="FWb1Nffg2"/>
+      <link link_name="Link0" sourceNode="MAILCLIENTt0Nffg2" destinationNode="DPIc5Nffg2"/>
+      <link link_name="Link24" sourceNode="MAILCLIENTt0Nffg2" destinationNode="VPNa3Nffg2"/>
+    </node>
+    <node node_name="MAILSERVERt0Nffg2" host_name="H4" functionaltypeId="MAILSERVERt">
+      <link link_name="Link2" sourceNode="MAILSERVERt0Nffg2" destinationNode="VPNa4Nffg2"/>
+      <link link_name="Link28" sourceNode="MAILSERVERt0Nffg2" destinationNode="FWb1Nffg2"/>
+    </node>
+  </nffg>
+  <nffg name_nffg="Nffg1" deploy_time="2016-09-28T19:24:20.000+02:00">
+    <node node_name="DPId0Nffg1" host_name="H4" functionaltypeId="DPId">
+      <link link_name="Link11" sourceNode="DPId0Nffg1" destinationNode="VPNa1Nffg1"/>
+    </node>
+    <node node_name="WEBSERVERt0Nffg1" host_name="H3" functionaltypeId="WEBSERVERt">
+      <link link_name="Link13" sourceNode="WEBSERVERt0Nffg1" destinationNode="VPNa1Nffg1"/>
+      <link link_name="Link4" sourceNode="WEBSERVERt0Nffg1" destinationNode="VPNa3Nffg1"/>
+    </node>
+    <node node_name="MAILCLIENTt1Nffg1" host_name="H2" functionaltypeId="MAILCLIENTt">
+      <link link_name="Link2" sourceNode="MAILCLIENTt1Nffg1" destinationNode="VPNa1Nffg1"/>
+      <link link_name="Link8" sourceNode="MAILCLIENTt1Nffg1" destinationNode="VPNa3Nffg1"/>
+    </node>
+    <node node_name="VPNa2Nffg1" host_name="H0" functionaltypeId="VPNa">
+      <link link_name="Link6" sourceNode="VPNa2Nffg1" destinationNode="VPNa1Nffg1"/>
+      <link link_name="Link9" sourceNode="VPNa2Nffg1" destinationNode="WEBCLIENTt0Nffg1"/>
+    </node>
+    <node node_name="VPNa1Nffg1" host_name="H5" functionaltypeId="VPNa">
+      <link link_name="Link10" sourceNode="VPNa1Nffg1" destinationNode="DPId4Nffg1"/>
+      <link link_name="Link1" sourceNode="VPNa1Nffg1" destinationNode="WEBCLIENTt0Nffg1"/>
+      <link link_name="Link3" sourceNode="VPNa1Nffg1" destinationNode="MAILCLIENTt1Nffg1"/>
+    </node>
+    <node node_name="VPNa3Nffg1" host_name="H1" functionaltypeId="VPNa">
+      <link link_name="Link5" sourceNode="VPNa3Nffg1" destinationNode="WEBSERVERt0Nffg1"/>
+      <link link_name="Link7" sourceNode="VPNa3Nffg1" destinationNode="DPId0Nffg1"/>
+    </node>
+    <node node_name="DPId4Nffg1" host_name="H2" functionaltypeId="DPId">
+      <link link_name="Link12" sourceNode="DPId4Nffg1" destinationNode="WEBCLIENTt0Nffg1"/>
+    </node>
+    <node node_name="WEBCLIENTt0Nffg1" host_name="H1" functionaltypeId="WEBCLIENTt">
+      <link link_name="Link0" sourceNode="WEBCLIENTt0Nffg1" destinationNode="VPNa1Nffg1"/>
+    </node>
+  </nffg>
+  <nffg name_nffg="Nffg0" deploy_time="2016-09-25T17:44:20.000+02:00">
+    <node node_name="FWb1Nffg0" host_name="H4" functionaltypeId="FWb">
+      <link link_name="Link11" sourceNode="FWb1Nffg0" destinationNode="WEBCLIENTt0Nffg0"/>
+      <link link_name="Link10" sourceNode="FWb1Nffg0" destinationNode="FWb0Nffg0"/>
+      <link link_name="Link14" sourceNode="FWb1Nffg0" destinationNode="VPNa3Nffg0"/>
+      <link link_name="Link5" sourceNode="FWb1Nffg0" destinationNode="WEBSERVERt1Nffg0"/>
+    </node>
+    <node node_name="WEBSERVERt1Nffg0" host_name="H2" functionaltypeId="WEBSERVERt">
+      <link link_name="Link4" sourceNode="WEBSERVERt1Nffg0" destinationNode="FWb1Nffg0"/>
+    </node>
+    <node node_name="VPNa3Nffg0" host_name="H0" functionaltypeId="VPNa">
+      <link link_name="Link1" sourceNode="VPNa3Nffg0" destinationNode="WEBCLIENTt0Nffg0"/>
+    </node>
+    <node node_name="FWb0Nffg0" host_name="H3" functionaltypeId="FWb">
+      <link link_name="Link12" sourceNode="FWb0Nffg0" destinationNode="MAILSERVERt0Nffg0"/>
+      <link link_name="Link13" sourceNode="FWb0Nffg0" destinationNode="VPNa3Nffg0"/>
+      <link link_name="Link7" sourceNode="FWb0Nffg0" destinationNode="WEBCLIENTt0Nffg0"/>
+      <link link_name="Link9" sourceNode="FWb0Nffg0" destinationNode="WEBSERVERt1Nffg0"/>
+    </node>
+    <node node_name="FWb2Nffg0" host_name="H5" functionaltypeId="FWb">
+      <link link_name="Link3" sourceNode="FWb2Nffg0" destinationNode="MAILSERVERt0Nffg0"/>
+    </node>
+    <node node_name="MAILSERVERt0Nffg0" host_name="H1" functionaltypeId="MAILSERVERt">
+      <link link_name="Link15" sourceNode="MAILSERVERt0Nffg0" destinationNode="VPNa3Nffg0"/>
+      <link link_name="Link2" sourceNode="MAILSERVERt0Nffg0" destinationNode="FWb2Nffg0"/>
+      <link link_name="Link8" sourceNode="MAILSERVERt0Nffg0" destinationNode="FWb1Nffg0"/>
+    </node>
+    <node node_name="WEBCLIENTt0Nffg0" host_name="H0" functionaltypeId="WEBCLIENTt">
+      <link link_name="Link0" sourceNode="WEBCLIENTt0Nffg0" destinationNode="VPNa3Nffg0"/>
+      <link link_name="Link6" sourceNode="WEBCLIENTt0Nffg0" destinationNode="FWb1Nffg0"/>
+    </node>
+  </nffg>
+  <in>
+    <host hostName="H0" number_VNFs="16" memory="8300.0" disk_storage="74000.0"/>
+    <host hostName="H1" number_VNFs="13" memory="8200.0" disk_storage="60000.0"/>
+    <host hostName="H2" number_VNFs="15" memory="5500.0" disk_storage="20000.0"/>
+    <host hostName="H3" number_VNFs="7" memory="8500.0" disk_storage="93000.0"/>
+    <host hostName="H4" number_VNFs="13" memory="7600.0" disk_storage="66000.0"/>
+    <host hostName="H5" number_VNFs="6" memory="1000.0" disk_storage="82000.0"/>
+  </in>
+  <catalog>
+    <functionaltype functionaltypeId="MAILCLIENTt" functionalTypeName="MAIL_CLIENT" required_memory="10.0" required_storage="210.0"/>
+    <functionaltype functionaltypeId="WEBCLIENTt" functionalTypeName="WEB_CLIENT" required_memory="22.0" required_storage="510.0"/>
+    <functionaltype functionaltypeId="MAILSERVERt" functionalTypeName="MAIL_SERVER" required_memory="700.0" required_storage="2200.0"/>
+    <functionaltype functionaltypeId="WEBSERVERt" functionalTypeName="WEB_SERVER" required_memory="230.0" required_storage="6300.0"/>
+    <functionaltype functionaltypeId="VPNa" functionalTypeName="VPN" required_memory="90.0" required_storage="600.0"/>
+    <functionaltype functionaltypeId="FWb" functionalTypeName="FW" required_memory="44.0" required_storage="110.0"/>
+    <functionaltype functionaltypeId="DPIc" functionalTypeName="DPI" required_memory="68.0" required_storage="510.0"/>
+    <functionaltype functionaltypeId="DPId" functionalTypeName="DPI" required_memory="32.0" required_storage="820.0"/>
+  </catalog>
+</networkProvider>
