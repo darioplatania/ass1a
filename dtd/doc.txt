@@ -19,22 +19,20 @@ For each element it is possible to specify the occurrence and if it is required 
 if it is required or not (optional).
 
 
-This is the hierarchy of my schema:
+TThis is the hierarchy of my schema:
 NETWORK PROVIDER
   |
   |-- NFFG* (NAME, deploy_time)
   |     |
   |     |-- NODE* (NAME, host_name, functionaltypeId)
-  |     |     |
-  |     |     |-- LINK (NAME, sourceNode,destinationNode, min_throughput, max_latency)
-  |     |
-  |     |
-  |	    |
+  |		      |
+  |     	      |-- LINK (NAME, sourceNode,destinationNode, min_throughput, max_latency)
+  |   
   |-- CATALOG
   |		|
   |		|-- FUNCTIONALTYPE* (functionaltypeId, functionalTypeName, required_memory, required_storage)
   |
-  |-- IN
+  |----IN
   |		|
   |		|-- HOST* (NAME, number_VNFs, memory, disk_storage)
   |		|
